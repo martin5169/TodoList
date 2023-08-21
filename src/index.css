@@ -1,0 +1,57 @@
+.gradient-custom-2 {
+  padding: 25px;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(126, 64, 246, 1),
+    rgba(80, 139, 252, 1)
+  );
+}
+.btn-add{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  margin: 5px;
+}
+.table{
+  color: white;
+}
+.task{
+  text-align: start;
+}
+.task-input{
+  color:white;
+  font-size: 20px;
+}
+.date{
+  text-align: center;
+}
+.status{
+  text-align: center;
+}
+.actions{
+  text-align: end;
+  
+}
+
+.task-column {
+  max-width: 130px;
+  word-wrap: break-word; 
+  text-align: start;
+}
+.actions-column {
+  text-align: end;
+  max-width: 20px;
+}
+.status-column {
+  max-width: 20px;
+  text-align: center;
+}
+.mask-custom {
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
