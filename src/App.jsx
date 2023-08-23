@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBBadge,
   MDBCard,
@@ -16,9 +16,10 @@ import {
   MDBTabs,
   MDBTabsItem,
 } from "mdb-react-ui-kit";
+import usePersistentStorage from "./usePersistentStorage";
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = usePersistentStorage("tasks",[]);
   const [descripcion, setDescripcion] = useState("");
   const [id, setId] = useState(1);
   const [activeTab, setActiveTab] = useState("all");
@@ -35,8 +36,10 @@ export default function App() {
   };
 
   const deleteTask = (taskId) => {
-    setTasks(tasks.filter((t) => t.id !== taskId));
+    const updatedTasks = tasks.filter((t) => t.id !== taskId);
+    setTasks(updatedTasks);
   };
+
 
   const changeStatus = (taskId) => {
     const updatedTasks = tasks.map((t) => {
